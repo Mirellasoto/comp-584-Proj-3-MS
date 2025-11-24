@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: Arial, Geneva, sans-serif;
+}
+a {
+	color: #2772B0;
+}
+.wrapper {
+	width: 96%;
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+div img {
+	width: 100%;
+	max-width: 225px; 
+}
+
+/* grid system -- mobile first! */
+
+.row{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-column-gap: 4%;
+}
+
+[class*="col-"] {
+  width: 100%;
+}
+
+.col-1,
+.col-1-1 { background-color: #A3CDD9; }
+
+.col-2,
+.col-2-1 { background-color: #FFFCE6; }
+
+.col-3 { background-color: #ECCD57; }
+.col-4 { background-color: #C0B8A3; }
+.col-5 { background-color: #A5BE90; }
+.col-6 { background-color: #C3E4FC; }
+
+
+/* Tablet Landscape Screen Sizes */ 
+@media only screen and (min-width: 513px) {
+	.row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .col-1,
+  .col-2 {
+    grid-column: span 1;
+  }
+
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-1-1,
+  .col-2-1 {
+    grid-column: span 2;
+  }
+
+  .col-2-1 {
+    grid-row: 1;
+  }
+}
+
+/* Desktop screen Sizes */ 
+@media only screen and (min-width: 1025px) {
+	.row {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .col-1,
+  .col-1-1 {
+    grid-column: span 3;
+  }
+
+  .col-2,
+  .col-2-1 {
+    grid-column: span 6;
+  }
+
+  .col-2-1 {
+    grid-row: auto;
+  }
+
+  .col-3 {
+    grid-column: span 9;
+  }
+
+  .col-4 {
+    grid-column: span 12;
+  }
+
+  .col-5 {
+    grid-column: span 4;
+  }
+
+  .col-6 {
+    grid-column: span 8;
+  }
+
+}
