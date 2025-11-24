@@ -57,7 +57,11 @@ div img {
     grid-template-columns: repeat(2, 1fr);
   }
 
-
+	/* 	as you can see, I am using span as a property, 
+		this is something that we did not go over in the powerpoint/class.
+		The way span works is that rather than the size being determined by a fixed start and end,
+		the start or end position is determined by it's size, in this case the end is based on the size */ 
+	
   .col-1,
   .col-2 {
     grid-column: span 1;
@@ -82,7 +86,7 @@ div img {
 	.row {
     grid-template-columns: repeat(12, 1fr);
   }
-
+	
   .col-1,
   .col-1-1 {
     grid-column: span 3;
